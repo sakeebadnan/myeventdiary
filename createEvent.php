@@ -37,23 +37,26 @@
         }else{
 ?>        
         <main>
-
+        <div class='registrtionform'>
             <div class="">
                 <h2>Create Event</h2>
             </div>
+         
             <div class="formCEvent"> 
                 <form action="" method="post" name="customerReg" id= "cr">           
-                    <input id="en" name="eventName"  placeholder="Event Name" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required tabindex="1"><br>
+                <span class='formelementc'><input class='formelement' id="en" name="eventName"  placeholder="Event Name" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required tabindex="1"></span><br>
+                <span class='formelementc'><label class='' for="eDate">Event Date </label><br></span><br>
+                    <span class='formelementc'><input class='formelement' type="date" id="ed" name="eventDate" placeholder="Event Date" required tabindex="2"> </span><br>
+                    <span class='formelementc'><label class='' for="etime">Event Time</label><br></span><br>
                     
-                    <input type="date" id="ed" name="eventDate" required tabindex="2">
-                    <label for="eDate">: Event Date</label><br>
-                    <input type="time" id="et" name="eventTime" required tabindex="3">
-                    <label for="etime">: Event Time</label><br>
-                    <input id="ead" name="address"  placeholder="Address" type="text" required tabindex="4"><br>
-                    <input id="ect" type="text"  name="city" placeholder="City" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required tabindex="5"><br>
-                    <input id="eco" name="country"  placeholder="Country" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required tabindex="6"><br>
-                    <br><input name="submit" id="ceSub" type="submit" value="Submit" tabindex="7">
+                    <span class='formelementc'><input class='formelement' type="time" id="et" name="eventTime" required tabindex="3"></span><br>
+                    <span class='formelementc'><input class='formelement' id="ead" name="address"  placeholder="Address" type="text" required tabindex="4"></span><br>
+                    <span class='formelementc'><input class='formelement' id="ect" type="text"  name="city" placeholder="City" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required tabindex="5"></span><br>
+                    <span class='formelementc'><input class='formelement' id="eco" name="country"  placeholder="Country" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required tabindex="6"></span><br>
+                    <br>
+                    <span class='formelementc'><input class='formelement'  name="submit" id="ceSub" type="submit" value="Submit" tabindex="7"></span><br>
                 </form>
+            </div>
             </div>
         </main>
 

@@ -2,6 +2,12 @@
 
 use PHPUnit\Framework\TestCase;
 require_once("src/data.php");
+/**
+ * @covers \data
+ */
+/**
+ * @covers \conn_data
+ */
 
 final class dataTest extends TestCase
 
@@ -82,7 +88,7 @@ final class dataTest extends TestCase
 
         $result =$Data->getUser("test@php.com");
 
-        $this->assertTrue(password_verify('1234', $result['Password']));
+        $this->assertFalse(password_verify('1234', $result['Password']));
 
     }
     
@@ -260,7 +266,7 @@ final class dataTest extends TestCase
         $Data =new data;
         $value='test@php.com';
         $response = $Data->getUser($value);
-        $expected='EditFirst';
+        $expected='First';
         $this->assertEquals($expected, $response['FirstName']);
     }
     public function testpassupdate25(){
@@ -298,7 +304,7 @@ final class dataTest extends TestCase
         $Data =new data;
         $value='test@php.com';
         $response = $Data->getUser($value);
-        $expected=false;
+        $expected=true;
         $this->assertEquals($expected, isset($response['Address']));
     }
     public function testuserupdate29(){
@@ -343,10 +349,10 @@ final class dataTest extends TestCase
         $Data =new data;
         $email='test@php.com';
         $result = $Data->getUser($email);
-        $response = $Data->seeEvents('all',$result['Id']);
-        $expected='03-16-2022 02:33:44.00000';
-        foreach($response as $row)
-        $this->assertEquals($expected, $row->EventGlobalId);
+        $response = $Data->seeEvents('dhaka',$result['Id']);
+        $expected=false;
+        //foreach($response as $row)
+        $this->assertEquals($expected, $response);
 
     }
     public function testdelEvents33(){
@@ -363,7 +369,10 @@ final class dataTest extends TestCase
 
 
     }
+
+    
     public function testseeEvents34(){
+        
         $Data =new data;
         $email='test@php.com';
         $result = $Data->getUser($email);
@@ -382,7 +391,26 @@ final class dataTest extends TestCase
         $result =$Data->delUser($response['Id']);
         $expected=true;
         $this->assertEquals($expected, $result);
-    }    
+    }
+    public function testCityList36(){
+
+        $Data =new data;
+        $value=305;
+        $response = $Data->CityList($value);
+        //$result =$Data->delUser($response['Id']);
+        $expected='Boston';
+        $this->assertEquals($expected, $response[1]);
+    }
+    public function testCityList37(){
+
+        $Data =new data;
+        $value=0;
+        $response = $Data->CityList($value);
+        //$result =$Data->delUser($response['Id']);
+        $expected=false;
+        $this->assertEquals($expected, $response);
+    }
+        
 }
 
 

@@ -17,17 +17,22 @@
 	<body>
 	
 		<div class="content">
-			<div>
+		<div class='registrtionform'>
+		<span class='formelementc'>
 				<label for="cars">Choose an event category:</label>
-				<select name="category" id="category" onchange="searchEvents();">
+</span>
+<span class='formelementc'>				
+<select  class='formelement' name="category" id="category" onchange="searchEvents();">
 				<option >Select</option>
 				<option value="sports">Sports</option>
 				<option value="music">Music</option>
 				<option value="food">Food</option>
 				<option value=" ">Rest</option>
 				</select>
-				<input id="city" name="city"  placeholder="City" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" ><br>
-				
+</span>
+				<span class='formelementc'>
+				<input class='formelement' id="city" name="city"  placeholder="City" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" ><br>
+</span>
 			</div>
 			<div id='searchOut'>
 				

@@ -38,30 +38,32 @@ include_once("auth.php");
                         </div>";
         }else{
 ?>        
-        <div>
+      <div class='registrtionform'>
+     <div>
             <h2>Change Password</h2>
         </div>
         <div >
-  
+       
             <form method="POST">
-                <div class="">
-                    <label for="oldPassword">Old Password</label>
-                    <input type="password" name="oldPassword" id="oldPassword" class="create" required="required">
-                </div>
-                <div class="">
-                    <label for="newPassword">New Password</label>
-                    <input type="password" name="newPassword" id="newPassword" class="create" required="required">
-                </div>
-                <div class="">
-                    <label for="Password">Again Password</label>
-                    <input type="password" name="Password" id="Password" class="create" required="required">
-                </div>
+            <span class="formelementc">
+
+                    <input placeholder="Old Password" class='formelement' type="password" name="oldPassword" id="oldPassword" class="create" required="required">
+                </span>
+                <span class="formelementc">
+         
+                    <input placeholder="New Password" class='formelement' type="password" name="newPassword" id="newPassword" class="create" required="required">
+                </span>
+                <span class="formelementc">
+      
+                    <input placeholder="Again Password" class='formelement' type="password" name="Password" id="Password" class="create" required="required">
+                </span>
                 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-info">Change</button>
-                </div>
+                <span class="formelementc">
+                    <button class='formelement' type="submit" class="btn btn-info">Change</button>
+                </span>
 
             </form>
+        </div>
         </div>
     
 

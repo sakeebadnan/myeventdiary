@@ -185,6 +185,7 @@ a {
   .registrtionform {
     float:left;
     width:50%;
+    margin-left:1%;
   }
 
   .registrationbutton{
@@ -205,3 +206,29 @@ a {
 
   }
 
+.inner-menu{
+  margin-left:1%;
+}
+ .formEdit{
+  margin-bottom: 1%;
+}
+.formunsubscribe{
+  margin-bottom: 5%;
+}
+.formelement-half{
+  width:20%;
+  margin-bottom: 1%;
+}
+
+.see-event-table{
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+.clearboth{
+  clear: both;
+}
+.formundelete{
+  margin-top: 1%;
+  margin-bottom: 5%;
+}

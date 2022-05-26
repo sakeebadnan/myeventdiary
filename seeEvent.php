@@ -19,13 +19,15 @@
 
 
 	<div class="content">
-		<div>
+		<div class='inner-menu registrtionform'>
 			<h1>See Your Event </h1>
 
 			<form method="post" class="seeEvent">						
-				<div>
-					<label for="txtCategory:">Choose a Category:</label>
-					<select name="Category" required>
+				<span class="formelementc">
+					<label>Select Category</label>
+				</span>
+					<span class="formelementc">
+					<select class='formelement' name="Category" required>
 						<option value="not">--Select--</option>
 						<option value="sports">Sports</option>
 						<option value="music">Music</option>
@@ -33,10 +35,12 @@
 						<option value="all">Rest</option>
 						
 					</select>
-				</div>
-				<div>
-					<label for="txtCity:">Choose a City:</label>
-					<select name="City" required>
+</span>
+<span class="formelementc">
+					<label >Choose a City:</label>
+					</span>
+					<span class="formelementc">
+					<select class='formelement' name="City" required>
 						<option value="all">All</option>
 <?php
 						for($x = 0; $x < count($returnValue); $x++)
@@ -44,12 +48,18 @@
 						
 ?>						
 					</select>
-				</div>
+					</span>
 
-				<input type="submit" name="submit" value="Submit">	
-			</form>
+					<span class="formelementc">
+						<input class='formelement' type="submit" name="submit" value="Submit">	
+						</span>
+					</form>
 		</div>
+		<div class='clearboth'>&nbsp;
+	</div>
+		<div class='see-event-table'>
 <?php
+
 if(isset($_POST['delete'])){
 	$count=0;
 	
@@ -106,13 +116,14 @@ if(isset($_POST['submit'])){
 		if($y==0) echo "<h3>No Event Found in databse.<h3>";
 		else {$_SESSION['y']=$y;
 			echo '</table>';
-			echo '<input type="submit" name="delete" value="Delete">';	
+			echo '<div class="registrtionform"><span class="formelementc"><input class="formelement formundelete" type="submit" name="delete" value="Delete"></span></div>';	
 			echo "</form>";
 		}
 	}
 	unset($_POST);		
 }
 ?>
+
 		</div>
 <?php
 					include('footer.php');

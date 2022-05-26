@@ -16,7 +16,7 @@
 
 	<body>
 		<div class="content">
-			<div>
+			<div class='inner-menu'>
 				<h1>My Events</h1>
 				<div class="form">
 					

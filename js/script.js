@@ -52,8 +52,8 @@ function searchEvents(){
                         count++;
                         if(count==1){
                             var tr = `
-                            <input type='button' name='save' value='save' onclick='insertevent()'>
-                            <table class='eventstable' id='evTable'>
+                            <div class='registrtionform'><span class='formelementc'>	<input class='formelement'  type='button' name='save' value='save' onclick='insertevent()'>
+                            </div><table class='eventstable' id='evTable'>
                                 <tr>
                                     <th></th>
                                     <th>Name</th>
@@ -174,11 +174,12 @@ function searchEvents(){
                 $.ajax({
                     url: "service.php?"+$events,
                     type: "GET",
-                    success: function(data) {                        
+                    success: function(data) { 
+                        window.location='index.php';                       
                     }
                 });
             }
             
         });
-        //window.location='index.php';
+        
     }
