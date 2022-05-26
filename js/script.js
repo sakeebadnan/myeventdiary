@@ -172,10 +172,10 @@ function searchEvents(){
                 $events +='&imageUrl='+value.images[0].url;
                 console.log($events);
                 $.ajax({
-                    url: "service.php?"+$events,
+                    url: "https://myeventdiary.herokuapp.com/service.php?"+$events,
                     type: "GET",
                     success: function(data) { 
-                        window.location='index.php';                       
+                        window.location='https://myeventdiary.herokuapp.com/index.php';                       
                     }
                 });
             }
