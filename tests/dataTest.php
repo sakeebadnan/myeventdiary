@@ -88,7 +88,7 @@ final class dataTest extends TestCase
 
         $result =$Data->getUser("test@php.com");
 
-        $this->assertFalse(password_verify('1234', $result['Password']));
+        $this->assertTrue(password_verify('1234', $result['Password']));
 
     }
     
@@ -266,7 +266,7 @@ final class dataTest extends TestCase
         $Data =new data;
         $value='test@php.com';
         $response = $Data->getUser($value);
-        $expected='First';
+        $expected='EditFirst';
         $this->assertEquals($expected, $response['FirstName']);
     }
     public function testpassupdate25(){
@@ -304,7 +304,7 @@ final class dataTest extends TestCase
         $Data =new data;
         $value='test@php.com';
         $response = $Data->getUser($value);
-        $expected=true;
+        $expected=false;
         $this->assertEquals($expected, isset($response['Address']));
     }
     public function testuserupdate29(){
@@ -346,13 +346,22 @@ final class dataTest extends TestCase
         $this->assertEquals($expected, $response);
     }
     public function testseeEvents32(){
+
         $Data =new data;
+
         $email='test@php.com';
+
         $result = $Data->getUser($email);
-        $response = $Data->seeEvents('dhaka',$result['Id']);
-        $expected=false;
-        //foreach($response as $row)
-        $this->assertEquals($expected, $response);
+
+        $response = $Data->seeEvents('all',$result['Id']);
+
+        $expected='03-16-2022 02:33:44.00000';
+
+        foreach($response as $row)
+
+        $this->assertEquals($expected, $row->EventGlobalId);
+
+
 
     }
     public function testdelEvents33(){
