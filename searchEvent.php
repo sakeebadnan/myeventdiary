@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>SearchEvent</title>
-		<link rel="shortcut icon" type="image/jpg" href="https://myeventdiary.herokuapp.com/img/logo.png"/>
-		<link rel="stylesheet" href="https://myeventdiary.herokuapp.com/css/style.css">
+		<link rel="shortcut icon" type="image/jpg" href="img/logo.png"/>
+		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<script src="https://myeventdiary.herokuapp.com/js/jquery-3.5.1.min.js"></script>
-		<script src="https://myeventdiary.herokuapp.com/js/script.js"></script>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/script.js"></script>
 	</head>
 <?php
 	include_once("auth.php");
