@@ -129,7 +129,7 @@ class data extends DB{
         }
         try{
             $newDb = new DB;
-           // $newDb->pdo->beginTransaction();
+            $newDb->pdo->beginTransaction();
             $query = <<<'SQL'
                 SELECT Id
                 FROM tb_cities
@@ -190,11 +190,11 @@ class data extends DB{
             $value['Id'],
             $eventId]);
             $stmt = null;
-            //$newDb->pdo->commit();
+            $newDb->pdo->commit();
             $valueReturn = 'success';
             
         }catch (Exception $e) {
-            //$newDb->pdo->rollBack();
+            $newDb->pdo->rollBack();
             echo $e;
             $valueReturn='Not';
         }
