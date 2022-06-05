@@ -149,7 +149,7 @@ a {
     background-color:#D3D3D3;
   }
 
-  td.ename{
+  th.ename, td.ename{
     width:40%;
   }
 

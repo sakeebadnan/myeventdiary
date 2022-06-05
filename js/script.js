@@ -35,6 +35,7 @@ function searchEvents(){
             var colorIndex=0;
             var alterNativeColor='even';
             var count =0;
+            var tr ='';
             $.each(data._embedded.events, function (index, value) {
                 console.log(value._embedded.venues[0].city.name);
                 try{
@@ -51,12 +52,12 @@ function searchEvents(){
                     }else{
                         count++;
                         if(count==1){
-                            var tr = `
+                            tr += `
                             <div class='registrtionform'><span class='formelementc'>	<input class='formelement'  type='button' name='save' value='save' onclick='insertevent()'>
                             </div><table class='eventstable' id='evTable'>
                                 <tr>
                                     <th></th>
-                                    <th>Name</th>
+                                    <th class='ename' >Name</th>
                                     <th class='other'>Category</th>
                                     <th class='other'>Date</th>
                                     <th class='other'>Time</th>
@@ -65,7 +66,7 @@ function searchEvents(){
                                     <th class='other'>Address</th>
                                     <th>Picture</th>
                                 </tr>`;
-                            $('#searchOut').append($(tr));
+                            //$('#searchOut').append($(tr1));
                         }else{
 
                             colorIndex++;
@@ -102,7 +103,7 @@ function searchEvents(){
                             }
                         
                             
-                            tr = `
+                            tr += `
                                 <tr class=${alterNativeColor}>
                                 <td><input class='eventid' type='checkbox' id='${value.id}' value='${value.id}' ></td>
                                 <td class='ename'><a href='${value.url}'>${value.name}</a></td>
@@ -116,7 +117,7 @@ function searchEvents(){
                                 </tr>
                 
                                 `;
-                            $('#searchOut').append($(tr));
+                            //$('#searchOut').append($(tr));
                             $('#insertevents').val('1');
                         }
                     }
@@ -126,7 +127,8 @@ function searchEvents(){
                 alert('No Event Found.');
                 window.location='searchEvent.php';            
             }else {
-                $('#searchOut').append(`</table>`);
+                tr +='</table>';
+                $('#searchOut').append(tr);
                 $('#category').val('Select').change();
                 $('#city').val('').change();
             }

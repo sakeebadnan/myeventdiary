@@ -124,9 +124,9 @@ class data extends DB{
 
     function InsertEventsDb($value) 
     {
-        foreach($value as $x => $x_value) {
+       /* foreach($value as $x => $x_value) {
             if(isset($value[$x]))$value[$x]=$this->sqlInjection($value[$x]);
-        }
+        }*/
         try{
             $newDb = new DB;
             $newDb->pdo->beginTransaction();
