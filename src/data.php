@@ -124,12 +124,12 @@ class data extends DB{
 
     function InsertEventsDb($value) 
     {
-       /* foreach($value as $x => $x_value) {
+        foreach($value as $x => $x_value) {
             if(isset($value[$x]))$value[$x]=$this->sqlInjection($value[$x]);
-        }*/
+        }
         try{
             $newDb = new DB;
-            $newDb->pdo->beginTransaction();
+           // $newDb->pdo->beginTransaction();
             $query = <<<'SQL'
                 SELECT Id
                 FROM tb_cities
@@ -190,11 +190,11 @@ class data extends DB{
             $value['Id'],
             $eventId]);
             $stmt = null;
-            $newDb->pdo->commit();
+            //$newDb->pdo->commit();
             $valueReturn = 'success';
             
         }catch (Exception $e) {
-            $newDb->pdo->rollBack();
+            //$newDb->pdo->rollBack();
             echo $e;
             $valueReturn='Not';
         }
