@@ -66,7 +66,7 @@
               <span class='formelementc'><input class="button registrationbutton" name="submit" id="customerRegistration" type="submit" value="Submit" tabindex="12"></span>
           </form>
       <div>
-        <p>Back to <a href='index.php'>>Login<</a></p>
+        <p> <a href='index.php'>>Back to Login<</a></p>
       </div>
       </div>
 </div>
