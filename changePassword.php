@@ -55,7 +55,7 @@ include_once("auth.php");
                 </span>
                 <span class="formelementc">
       
-                    <input placeholder="Again Password" class='formelement' type="password" name="Password" id="Password" class="create" required="required">
+                    <input placeholder="Retype New Password" class='formelement' type="password" name="Password" id="Password" class="create" required="required">
                 </span>
                 
                 <span class="formelementc">
