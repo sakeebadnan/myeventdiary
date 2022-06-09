@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>SearchEvent</title>
+		<title>Search and Select Event</title>
 		<link rel="shortcut icon" type="image/jpg" href="img/logo.png"/>
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
