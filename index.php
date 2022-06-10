@@ -21,7 +21,7 @@
 				<div class="form">
 					
 					<p><a href="seeEvent.php">See Event</a></p>
-					<p><a href="searchEvent.php">Search and Select Event</a></p>
+					<p><a href="searchEvent.php">Search and Select Events</a></p>
 					<p><a href="createEvent.php">Create Event</a></p>				
 				</div>
 			</div>
