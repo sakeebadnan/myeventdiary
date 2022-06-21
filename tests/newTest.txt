@@ -261,18 +261,6 @@ final class dataTest extends TestCase
         $expected=true;
         $this->assertEquals($expected, $result);
     }
-    public function testuserupdate38(){
-
-        $Data =new data;
-        $value='test@php.com';
-        $value=$Data->getUser($value);
-        $value['FirstName']=null;
-        $value['LastName']='EditLast';
-        unset($value['return']);
-        $result =$Data->updateUser($value);
-        $expected=false;
-        $this->assertEquals($expected, $result);
-    }
     public function testuserupdate24(){
 
         $Data =new data;
@@ -390,7 +378,21 @@ final class dataTest extends TestCase
 
 
     }
-    
+    public function testdelEvents38(){
+        $Data =new data;
+        $email='test@php.com';
+        $result = $Data->getUser($email);
+        $id=$result['Id'];
+        $res = $Data->seeEvents('all',$id);
+        foreach($res as $row)
+        $eventId=$row->EventId;
+        $response = $Data->delEvent($eventId,$id);
+        $expected=false;
+        $this->assertEquals($expected, $response);
+
+
+    }
+
     
     public function testseeEvents34(){
         
